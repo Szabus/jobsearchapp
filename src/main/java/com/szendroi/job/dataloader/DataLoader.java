@@ -39,6 +39,9 @@ public class DataLoader {
             System.out.println(clientList);
             System.out.println(clientList.get(0).getId());
             System.out.println(clientList.get(1).getUserName());
+
+            List<Position> positionList = positionRepo.findByPositionNameContainingIgnoreCase("EACH");
+            System.out.println(positionList.get(0).getPositionName());
             };
         }
     }
