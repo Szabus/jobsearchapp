@@ -40,7 +40,7 @@ public class DataLoader {
             System.out.println(clientList.get(0).getId());
             System.out.println(clientList.get(1).getUserName());
 
-            List<Position> positionList = positionRepo.findByPositionNameContainingIgnoreCase("EACH");
+            List<Position> positionList = positionRepo.findByLocationIgnoreCaseAndPositionNameContainingIgnoreCase("london","EACH");
             System.out.println(positionList.get(0).getPositionName());
             };
         }
