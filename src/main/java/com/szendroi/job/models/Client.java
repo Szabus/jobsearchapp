@@ -1,12 +1,13 @@
 package com.szendroi.job.models;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.GenericGenerator;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.UUID;
 
 
 @Entity
@@ -15,10 +16,20 @@ import javax.persistence.Id;
 public class Client {
 
     @Id
-    private String id;
+    @GeneratedValue(generator = "UUID")
+    @GenericGenerator(
+            name = "UUID",
+            strategy = "org.hibernate.id.UUIDGenerator"
+    )
+    @Column(name = "id", updatable = false, nullable = false)
+    private UUID id;
     @Column(length = 100, unique = true, nullable = false)
     private String userName;
     @Column(length = 100, unique = true, nullable = false)
     private String email;
 
+    public Client(String userName, String email) {
+        this.userName = userName;
+        this.email = email;
+    }
 }

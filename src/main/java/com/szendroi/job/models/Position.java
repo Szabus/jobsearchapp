@@ -1,5 +1,6 @@
 package com.szendroi.job.models;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -18,4 +19,9 @@ public class Position {
     private String positionName;
     @Column(length = 50, nullable = false)
     private String location;
+
+    public Position(String positionName, String location) {
+        this.positionName = positionName;
+        this.location = location;
+    }
 }
