@@ -1,0 +1,28 @@
+**Job Search App **
+--------------------------------------------------------
+This is the homework application
+______________________________________________________
+For any question contact: szendroi.szabina@gmail.com
+
+*BUILD*
+Build: mvn clean install
+Run locally: mvn spring-boot:run
+default port is 8088
+At this point frontend not added to the app
+
+*DATABASE*
+H2 jdbc URL:jdbc:h2:mem:testdb
+H2 default user: sa
+H2 default password: password
+
+*FUTURE FEATURES*
+- Authorization: admin permissions, user permissons
+- Model classes update:
+    Clients with password , CV upload, contact info fields
+    Positions with category, descripton
+- Modify uploaded datas
+- Apply platform for clients
+- Message platform
+- Security
+- Authentication
+- Tests
