@@ -9,8 +9,6 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import java.util.List;
-
 @Configuration
 @AllArgsConstructor
 public class DataLoader {
@@ -34,16 +32,6 @@ public class DataLoader {
             clientRepo.save(secondTestClient);
             positionRepo.save(firstTestPosition);
             positionRepo.save(secondTestPosition);
-
-            List<Client> clientList = clientRepo.findAll();
-            System.out.println(clientList);
-            System.out.println(clientList.get(0).getId());
-            System.out.println(clientList.get(1).getUserName());
-
-            List<Position> positionList = positionRepo.findByLocationIgnoreCaseAndPositionNameContainingIgnoreCase
-                    ("london","EACH");
-            System.out.println(positionList.get(0).getPositionName());
-            System.out.println(clientRepo.existsById(clientList.get(0).getId()));
             };
         }
     }
