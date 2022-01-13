@@ -42,6 +42,7 @@ public class DataLoader {
 
             List<Position> positionList = positionRepo.findByLocationIgnoreCaseAndPositionNameContainingIgnoreCase("london","EACH");
             System.out.println(positionList.get(0).getPositionName());
+            System.out.println(clientRepo.existsById(clientList.get(0).getId()));
             };
         }
     }
