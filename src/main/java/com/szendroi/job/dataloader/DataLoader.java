@@ -21,9 +21,9 @@ public class DataLoader {
     @Bean
     public CommandLineRunner testData() {
 
-        Client firstTestClient = new Client("dumbledore","albus@roxfort.com");
+        Client firstTestClient = new Client("Test Elek","test1@gmail.com");
 
-        Client secondTestClient = new Client("Mcglagony", "mc@mc.com");
+        Client secondTestClient = new Client("Test Vera", "test2@test.com");
 
         Position firstTestPosition = new Position("Java developer", "Hungary");
 
@@ -40,7 +40,8 @@ public class DataLoader {
             System.out.println(clientList.get(0).getId());
             System.out.println(clientList.get(1).getUserName());
 
-            List<Position> positionList = positionRepo.findByLocationIgnoreCaseAndPositionNameContainingIgnoreCase("london","EACH");
+            List<Position> positionList = positionRepo.findByLocationIgnoreCaseAndPositionNameContainingIgnoreCase
+                    ("london","EACH");
             System.out.println(positionList.get(0).getPositionName());
             System.out.println(clientRepo.existsById(clientList.get(0).getId()));
             };
