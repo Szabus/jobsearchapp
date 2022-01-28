@@ -18,7 +18,7 @@ public class PositionController {
     PositionService positionService;
 
     @PostMapping(path = "/positions")
-    public ResponseEntity<Position> create(@RequestBody final Position newPosition, UUID id) {
+    public ResponseEntity<Position> create(@RequestBody final Position newPosition, @RequestBody UUID id) {
 
         boolean success = positionService.registerPosition(newPosition, id);
         if (success) {
