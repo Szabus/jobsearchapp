@@ -2,7 +2,7 @@
 --------------------------------------------------------
 This is the homework application
 ______________________________________________________
-For any question contact: szendroi.szabina@gmail.com
+For any questions contact: szendroi.szabina@gmail.com
 
 *BUILD*
 Build: mvn clean install
